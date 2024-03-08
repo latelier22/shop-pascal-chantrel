@@ -1,0 +1,12 @@
+{
+  "entrypoints": {
+    "app": {
+      "css": [
+        "/marcel-sejour-theme/app.css"
+      ],
+      "js": [
+        "/marcel-sejour-theme/app.js"
+      ]
+    }
+  }
+}

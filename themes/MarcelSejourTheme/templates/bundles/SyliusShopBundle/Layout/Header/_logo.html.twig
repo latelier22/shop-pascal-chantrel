@@ -1,0 +1,17 @@
+<div class="column">
+    LOGO
+    <a href="{{ path('sylius_shop_homepage') }}">
+        {% if use_webpack %}
+        WEBPACK
+            <img src="{{ asset('marcel-sejour-theme/images/logo-marcel.png', 'marcelsejourTheme') }}" alt="Marcel Séjour logo" class="ui small image" />
+        {% else %}
+        PAS WEBPACK
+            <img src="{{ asset('assets/shop/img/logo.png') }}" alt="Sylius logo" class="ui small image" />
+        {% endif %}
+    </a>
+</div>
+
+{# 
+<div class="column">
+    <a href="{{ path('sylius_shop_homepage') }}"><img src="{{ asset('build/app/shop/images/logo.png', 'app.shop') }}" alt="Logo" class="ui small image" /></a>
+</div> #}

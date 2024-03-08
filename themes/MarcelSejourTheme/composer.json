@@ -1,0 +1,14 @@
+{
+    "name": "latelier22/marcel-sejour-theme",
+    "authors": [
+        {
+            "name": "Le corre Cyrille",
+            "email": "latelier.cyrille@gmail.com"
+        }
+    ],
+    "extra": {
+        "sylius-theme": {
+            "title": "Marcel Sejour Theme"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "entrypoints": {
+    "shop-marcel": {
+      "css": [
+        "/build/shop/shop-marcel.css"
+      ],
+      "js": [
+        "/build/shop/shop-marcel.js"
+      ]
+    },
+    "shop-entry": {
+      "css": [
+        "/build/shop/shop-entry.css"
+      ],
+      "js": [
+        "/build/shop/shop-entry.js"
+      ]
+    }
+  }
+}

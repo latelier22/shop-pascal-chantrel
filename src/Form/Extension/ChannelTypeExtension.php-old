@@ -1,0 +1,26 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Form\Extension;
+
+use Symfony\Component\Form\AbstractTypeExtension;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Sylius\Bundle\ChannelBundle\Form\Type\ChannelType;
+
+final  class  ChannelTypeExtension  extends  AbstractTypeExtension
+{   
+	public  function buildForm(FormBuilderInterface  $builder, array  $options): void
+	{
+		$builder->add('catalogueMode', CheckboxType::class, [
+			'label'  => 'channel.form.label.catalog_mode',
+			'required'  =>  false,
+		]);
+	}
+
+	public  static  function getExtendedTypes(): iterable
+	{
+		return [ChannelType::class];
+	}
+}

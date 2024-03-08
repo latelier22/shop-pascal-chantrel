@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+
+<resources xmlns="https://api-platform.com/schema/metadata"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="https://api-platform.com/schema/metadata https://api-platform.com/schema/metadata/metadata-2.0.xsd"
+>
+    <resource class="MonsieurBiz\SyliusCmsPagePlugin\Entity\Page" shortName="Page">
+        <attribute name="validation_groups">sylius</attribute>
+
+         <collectionOperations>
+            <collectionOperation name="admin_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/admin/pages</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">admin:page:read</attribute>
+                    
+                </attribute>
+            </collectionOperation>
+            <collectionOperation name="shop_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/shop/pages</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">shop:page:read</attribute>
+                    
+                </attribute>
+            </collectionOperation>
+        </collectionOperations>
+
+        <itemOperations>
+            <itemOperation name="admin_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/admin/pages/{id}</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">admin:page:read</attribute>
+                </attribute>
+            </itemOperation>
+            <itemOperation name="shop_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/shop/pages/{id}</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">shop:page:read</attribute>
+                </attribute>
+                <!-- <attribute name="openapi_context">
+                    <attribute name="parameters">
+                        <attribute>
+                            <attribute name="name">filter</attribute>
+                            <attribute name="in">query</attribute>
+                            <attribute name="description">Provide one of supported image liip imagine filters.</attribute>
+                            <attribute name="schema">
+                                <attribute name="type">string</attribute>
+                            </attribute>
+                        </attribute>
+                    </attribute>
+                </attribute> -->
+            </itemOperation>
+        </itemOperations>
+
+        <property name="id" identifier="true" writable="false" />
+        <property name="code" required="true" />
+        
+
+    </resource>
+</resources>

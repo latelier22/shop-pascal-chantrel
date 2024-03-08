@@ -1,0 +1,39 @@
+sylius_ui:
+    events:
+        sylius.shop.layout.before_body:
+            blocks:
+                legacy:
+                    enabled: false
+
+        sylius.shop.layout.topbar:
+            blocks:
+                before_switchers_legacy:
+                    enabled: false
+
+
+        # sylius.shop.layout.header:
+        #     blocks:
+        #         my_block_name: 'block.html.twig'
+        # sylius.shop.layout.header.grid:
+        #     blocks:
+        #         cart:
+        #             enabled: sylius.channel.isCatalogMode()
+
+                #  my_text:
+                #     template: 'mytext.html.twig'
+                #      priority: 15
+        sylius.shop.homepage:
+            blocks:
+                banner:
+                    template: 'banner.html.twig'
+                    priority: 100
+
+        sylius.shop.layout.footer:
+            blocks:
+                grid:
+                    enabled: false
+
+        sylius.shop.layout.footer.grid:
+            blocks:
+                plus:
+                    enabled: false
